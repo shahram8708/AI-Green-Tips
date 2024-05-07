@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Green Tips</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>AI Green Tips</h1>
+        <p>Discover Eco-Friendly Practices!</p>
+    </header>
+    <main>
+        <section class="generator">
+            <h2>AI Green Tips</h2>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+            <form action="/search" method="post">
+                <input type="text" name="search_query" placeholder="Enter Environmental Topic or Question...">
+                <button type="submit">Detect</button>
+            </form>
+        </section>
+        <section class="about">
+            <h2>About</h2>
+            <p>Welcome to AI Green Tips! Enter a topic or question related to environmental conservation to explore
+                actionable tips and advice. Our advanced AI algorithms analyze your input to provide tailored
+                suggestions for a greener lifestyle.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AI Green Tips. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
